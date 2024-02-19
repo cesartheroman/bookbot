@@ -18,15 +18,13 @@ def count_words(text):
 
 def count_characters(text):
     char_dict = {}
-    words = text.split()
 
-    for word in words:
-        lower_cased_word = word.lower()
-        for char in lower_cased_word:
-            if char.isalpha():
-                if char not in char_dict:
-                    char_dict[char] = 0
-                char_dict[char] += 1
+    for word in text:
+        word = word.lower()
+        if word.isalpha():
+            if word not in char_dict:
+                char_dict[word] = 0
+            char_dict[word] += 1
 
     return char_dict
 
